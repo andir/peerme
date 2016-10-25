@@ -1,9 +1,13 @@
 language: python
 python:
-  - "3.4"
   - "3.5"
-  - "3.5-dev" # 3.5 development branch
-script: make test
+  - "3.5-dev"
+install:
+  - pip install .
+script:
+  - peerme -s pdbapi discover -d 32934
+  - peerme -s pdbapi generate -d 15169 -t ios.template
+  - python setup.py test
 notifications:
   email:
     recipients:
