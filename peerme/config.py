@@ -30,7 +30,6 @@ class PeermeConfig():
             'http_timeout': 30
         }
 
-
     def __repr__(self):
         output = ''
         for section in self.config.sections():

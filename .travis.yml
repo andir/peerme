@@ -1,0 +1,11 @@
+language: python
+python:
+  - "3.4"
+  - "3.5"
+  - "3.5-dev" # 3.5 development branch
+script: make test
+notifications:
+  email:
+    recipients:
+      - me@cooperlees.com
+      - james@paussa.net
